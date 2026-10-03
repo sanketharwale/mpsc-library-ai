@@ -1,18 +1,18 @@
 # MPSC Library AI
 
-Free MPSC study-material community.
+A functional MVP for a free MPSC study-material community.
 
-## MVP
-- Public study-material library
-- Search and categories
-- Student PDF upload workflow (next phase)
-- Admin moderation (next phase)
-- PDF reader/download (next phase)
-- AI PDF search, summaries and MCQ generation (next phase)
+### Current functionality
+- Public approved-material library
+- Search and filters
+- PDF upload with validation
+- Pending moderation workflow
+- Local admin moderation page at /admin
+- Download of uploaded PDFs in the same browser
+- Responsive UI
 
-## Run
-npm install
-npm run dev
+### Important
+The current MVP stores uploaded PDFs in browser localStorage. This makes the workflow functional for testing, but it is **not yet multi-user cloud storage**. For a real public platform, connect PostgreSQL + object storage + authentication before launch.
 
-## Deployment
-Designed for Vercel + GitHub.
+### Production architecture
+Next.js + PostgreSQL + object storage (Vercel Blob/S3-compatible) + authentication + admin role + optional AI/RAG.
